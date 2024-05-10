@@ -20,7 +20,7 @@ const initSlider = () => {
           const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
           const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
           
-          scrollbarThumb.style.left = `${boundedPosition}px`;
+          scrollbarThumb.style.left = ${boundedPosition}px;
           imageList.scrollLeft = scrollPosition;
       }
 
@@ -54,7 +54,7 @@ const initSlider = () => {
   const updateScrollThumbPosition = () => {
       const scrollPosition = imageList.scrollLeft;
       const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-      scrollbarThumb.style.left = `${thumbPosition}px`;
+      scrollbarThumb.style.left = ${thumbPosition}px;
   }
 
   // Call these two functions when image list scrolls
@@ -66,3 +66,43 @@ const initSlider = () => {
 
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
+
+
+const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+    function toggleMenu() {
+        menu.classList.toggle('visible');
+    }
+    menuIcon.addEventListener('click', toggleMenu);
+    var scrollcontainer= document.querySelector(".gallery");
+    var backbutton=document.getElementById("back-button");
+    var nextbutton=document.getElementById("next-button");
+    scrollcontainer.addEventListener("wheel",(evt) => {
+        evt.preventDefault();
+        scrollcontainer.scrollLeft+=evt.deltaY;
+        scrollcontainer.style.scrollBehavior="auto";
+    });
+    nextbutton.addEventListener("click",()=>{
+        scrollcontainer.style.scrollBehavior="smooth";
+        scrollcontainer.scrollLeft+=1300;
+    })
+    backbutton.addEventListener("click",()=>{
+        scrollcontainer.style.scrollBehavior="smooth";
+        scrollcontainer.scrollLeft-=1300;
+    })
+    var scrollcontainerone= document.querySelector(".gallery-one");
+    var backbuttonone=document.getElementById("back-button-one");
+    var nextbuttonone=document.getElementById("next-button-one");
+    scrollcontainerone.addEventListener("wheel",(evt) => {
+        evt.preventDefault();
+        scrollcontainerone.scrollLeft+=evt.deltaY;
+        scrollcontainerone.style.scrollBehavior="auto";
+    });
+    nextbuttonone.addEventListener("click",()=>{
+        scrollcontainerone.style.scrollBehavior="smooth";
+        scrollcontainerone.scrollLeft+=1300;
+    })
+    backbuttonone.addEventListener("click",()=>{
+        scrollcontainerone.style.scrollBehavior="smooth";
+        scrollcontainerone.scrollLeft-=1300;
+    })
