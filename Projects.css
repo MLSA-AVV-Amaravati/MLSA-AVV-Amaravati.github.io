@@ -7,7 +7,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .background{
-    background-image:url(./background2.jpg);
+    background-image:url("https://res.cloudinary.com/dnencf5vv/image/upload/v1715339364/background2_mgxvso.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; 
@@ -77,7 +77,7 @@ nav{
     clip-path: polygon(37% 0, 100% 0%, 63% 100%, 0% 100%);
     margin-top: 70px;
     margin-left: 30px;
-    background-image: url(./istockphoto-1222357475-612x612.jpg);
+    background-image: url("https://res.cloudinary.com/dnencf5vv/image/upload/v1715339370/istockphoto-1222357475-612x612_algabl.jpg");
     background-size: cover;
 }
 .parallelogram-2{
@@ -88,7 +88,7 @@ nav{
     position: absolute;
     left: 943px;
     top: 170px;
-    background-image: url(./istockphoto-1222357475-612x612.jpg);
+    background-image: url("https://res.cloudinary.com/dnencf5vv/image/upload/v1715339370/istockphoto-1222357475-612x612_algabl.jpg");
     background-size: cover;
 }
 .parallelogram-3{
@@ -99,7 +99,7 @@ nav{
     position: absolute;
     left: 1140px;
     top: 170px;
-    background-image: url(./istockphoto-1222357475-612x612.jpg);
+    background-image: url("https://res.cloudinary.com/dnencf5vv/image/upload/v1715339370/istockphoto-1222357475-612x612_algabl.jpg");
     background-size: cover;
 }
 .second-section{
