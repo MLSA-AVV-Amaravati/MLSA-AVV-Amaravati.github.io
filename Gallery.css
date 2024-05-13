@@ -148,8 +148,8 @@ nav{
 .gallery-pics img:hover {
   z-index: 2;
   transform: scale(1.2);
-  box-shadow: 0 0 15px 0 cyan;
-  border:2px solid cyan;
+  box-shadow: 0 0 15px 0 #203a61;
+  border:2px solid #203a61;
   cursor: pointer;
 }
 
@@ -364,27 +364,37 @@ footer .container {
     
 }
 .gallery-pics img {
-  z-index: 99;
+  z-index: 1;
   max-width: 100%;
-  grid-column: span 2;
-  margin-bottom: -52%;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  margin-bottom: 52%;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
   transform: scale(1);
   transition: all .25s;
 }
-.img1:nth-child(5n + 1) {
+.img1:nth-child(7n+1) {
   grid-column: 2 / span 2;
   border: 2px solid black;
 }
 .gallery-pics {
   position: relative;
-  flex-grow: 2;
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2vmin;
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+  align-items: center;
 }
+
+.gallery-pics img:hover {
+  z-index: 5;
+  transform: scale(1.2);
+  box-shadow: 0 0 15px 0 #203a61;
+  border:2px solid #203a61;
+  cursor: pointer;
 }
-@media (min-width: 768px) and (max-width: 1100px ){
+
+}
+@media (min-width: 768px) and (max-width: 1188px ){
     .logo{
         margin-left: 20px;
     }
@@ -451,19 +461,20 @@ nav{
   display: block;
 }
 }
-@media (min-width: 360px) and (max-width: 391px ){
-  footer{
-    width: 145vw;
+@media (min-width: 340px) and (max-width: 451px ){
+footer{
+    width: 115vw;
 }
 nav{
     /* background-color: cornflowerblue; */
     width: 415px;
     margin-left: 15px;
+    z-index: 99;
 }
 .menu-lines{
   margin-left: 210px;
 }
-  .MLSA-word{
+.MLSA-word{
     color: white;
     margin-top: 75px;
     margin-left: 10px;
