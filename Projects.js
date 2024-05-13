@@ -36,3 +36,34 @@ const menuIcon = document.getElementById('menu-icon');
         scrollcontainerone.style.scrollBehavior="smooth";
         scrollcontainerone.scrollLeft-=1300;
     })
+    //slide
+    document.addEventListener('DOMContentLoaded', function() {
+  const images = ['img-1.jpg', 'img-2.jpg', 'img-3.jpg', 'img-4.jpg', 'img-5.jpg', 'img-6.jpg'];
+  let currentIndex = 0;
+
+  document.querySelector('.left-arrow').addEventListener('click', function() {
+    currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
+    updateImages();
+  });
+
+  document.querySelector('.right-arrow').addEventListener('click', function() {
+    currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
+    updateImages();
+  });
+
+  function updateImages() {
+    const imgUrls = [];
+    for (let i = 0; i < 3; i++) {
+      imgUrls.push(`url('./${images[(currentIndex + i) % images.length]}')`);
+    }
+    document.querySelector('.parallelogram-1').style.backgroundImage = imgUrls[0];
+    document.querySelector('.parallelogram-2').style.backgroundImage = imgUrls[1];
+    document.querySelector('.parallelogram-3').style.backgroundImage = imgUrls[2];
+  }
+
+  updateImages();
+});
+
+      
+    
+      
