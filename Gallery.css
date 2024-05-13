@@ -18,7 +18,6 @@
   z-index: -1;
 
 }
-/*nav*/
 nav{
   background-color: rgba(255,255,255,0.1);
   height: 100px;
@@ -59,7 +58,7 @@ nav{
   margin-right: 45px;
   display: none;
 }
-/*main section*/
+
 .header{
   width: 100%;
   min-height: 50vh ;
@@ -80,6 +79,7 @@ nav{
   margin-left: 60px;
   font-size: 130px;
 }
+
 
 .user-img1{
   position: absolute;
@@ -113,6 +113,7 @@ nav{
       background-size:100%;
   }
 }
+
 
 .gallery-pics img {
   height: 300px;
@@ -287,6 +288,7 @@ footer .container {
   }
   nav{
       left: 2vw;
+      z-index: 99;
   }
   .logo{
       margin-left: 8vw;
@@ -325,15 +327,25 @@ footer .container {
     width: 200px;
     
 }
-.gallery-pics{
+.gallery-pics img {
+  z-index: 99;
+  max-width: 100%;
+  grid-column: span 2;
+  margin-bottom: -52%;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  transform: scale(1);
+  transition: all .25s;
+}
+.img1:nth-child(5n + 1) {
+  grid-column: 2 / span 2;
+  border: 2px solid black;
+}
+.gallery-pics {
   position: relative;
-  flex-grow: 1;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  flex-grow: 2;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 2vmin;
-  justify-items: center;
-  align-items: center;
 }
 }
 @media (min-width: 768px) and (max-width: 1100px ){
@@ -362,16 +374,7 @@ footer .container {
     width: 350px;
     
 }
-.gallery-pics{
-  position: relative;
-  flex-grow: 1;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-gap: 2vmin;
-  justify-items: center;
-  align-items: center;
-}
+
 .menu-icons-div{
   position: absolute;
   top: 70px;
@@ -391,6 +394,7 @@ footer .container {
 }
 nav{
   left: 2vw;
+  z-index: 99;
 }
 .logo{
   margin-left: 8vw;
