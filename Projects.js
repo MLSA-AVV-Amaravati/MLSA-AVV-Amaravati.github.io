@@ -54,7 +54,7 @@ const menuIcon = document.getElementById('menu-icon');
   function updateImages() {
     const imgUrls = [];
     for (let i = 0; i < 3; i++) {
-      imgUrls.push(`url('./${images[(currentIndex + i) % images.length]}')`);
+      imgUrls.push(`url('./images/${images[(currentIndex + i) % images.length]}')`);
     }
     document.querySelector('.parallelogram-1').style.backgroundImage = imgUrls[0];
     document.querySelector('.parallelogram-2').style.backgroundImage = imgUrls[1];
@@ -64,6 +64,6 @@ const menuIcon = document.getElementById('menu-icon');
   updateImages();
 });
 
-      
+
     
       
