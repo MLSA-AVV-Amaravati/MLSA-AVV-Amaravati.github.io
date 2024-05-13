@@ -262,12 +262,48 @@ footer .container {
   color: #ffffff;
 }
 /* == responsive == */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 766px) {
   .footer .container {
     flex-direction: column;
   }
+  footer{
+      width: 100%;
+  }
 }
-
+@media (max-width: 1269px){
+  .menu-icons-div{
+      position: absolute;
+      top: 70px;
+      right: 5vw;
+      transition: all 0.5s;  
+  }
+  .menu-icons{
+      flex-direction: column;  
+      width: 90vw;
+      padding-left: 35vw;
+      padding-bottom: 15px;
+      background-color:#203a61;
+      transition: all 0.5s;
+  }
+  .menu-icons li {
+      margin-top: 15px;
+  }
+  .menu-lines{
+      display: block;
+      margin-left: 60vw;
+  }
+  .menu-lines:hover{
+      border: 2px rgb(115, 115, 115) solid;
+      padding: 5px;
+      border-radius: 10px;
+  }
+  .menu-icons-div {
+      display: none;
+  }
+  .menu-icons-div.visible {
+      display: block;
+  }
+}
 @media (max-width: 768px) { 
   .menu-icons-div{
       position: absolute;
@@ -416,6 +452,17 @@ nav{
 }
 }
 @media (min-width: 360px) and (max-width: 391px ){
+  footer{
+    width: 145vw;
+}
+nav{
+    /* background-color: cornflowerblue; */
+    width: 415px;
+    margin-left: 15px;
+}
+.menu-lines{
+  margin-left: 210px;
+}
   .MLSA-word{
     color: white;
     margin-top: 75px;
@@ -473,4 +520,17 @@ display: none;
 .menu-icons-div.visible {
 display: block;
 }
+}
+@media (min-width: 1390px) and (max-width: 1471px ){
+  /* nav{
+      background-color: blueviolet;
+  } */
+  
+  .MLSA-word{
+      font-size: 120px;
+  }
+  .gallery-word{
+      font-size: 120px;
+  }
+  
 }
