@@ -247,8 +247,12 @@
 
     <!--JS file-->
     <script>
-let menu = document.querySelector("#menu-bars");
-let navbar = document.querySelector(".navbar");
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+    function toggleMenu() {
+        menu.classList.toggle('visible');
+    }
+    menuIcon.addEventListener('click', toggleMenu);
 var swiper = new Swiper(".home-slider", {
   effect: "coverflow",
   grabCursor: true,
