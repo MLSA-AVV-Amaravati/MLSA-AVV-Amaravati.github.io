@@ -66,6 +66,13 @@
         top: 350px;
         left: 70px;
       }
+      @media (max-width: 600px) {
+        .mlsafull {
+          top: 335px;
+          left: 70px;
+        }
+      }
+
       .microsoft-learn {
         color: white;
         font-size: 70px;
@@ -73,6 +80,22 @@
         left: 10px;
         top: 20px;
         position: relative;
+      }
+      @media (max-width: 600px) {
+        .microsoft-learn {
+          font-size: 25px;
+          position: absolute;
+          margin-top: -12vh;
+          margin-left: -0.6vh;
+        }
+      }
+      @media (max-width: 414px) {
+        .microsoft-learn {
+          font-size: 25px;
+          position: absolute;
+          margin-top: -18vh;
+          margin-left: -0.6vh;
+        }
       }
       .stu-amb {
         color: white;
@@ -82,9 +105,17 @@
         position: relative;
         bottom: 15px;
       }
+      @media (max-width: 600px) {
+        .stu-amb {
+          font-size: 20px;
+          position: absolute;
+          margin-bottom: 1vh;
+          margin-left: -11vh;
+        }
+      }
       body {
-        --gradient-start-color: #020024;
-        --gradient-mid-color: #203a61;
+        --gradient-start-color: #152874;
+        --gradient-mid-color: #152874;
         --gradient-end-color: #0078d4;
         background: linear-gradient(
           to right,
@@ -99,13 +130,27 @@
         font-family: serif;
         background: linear-gradient(
           to right,
-          var(--gradient-mid-color),
+          var(--gradient-end-color),
           var(--gradient-end-color)
         );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         position: relative;
         top: 20px;
+      }
+      @media (max-width: 600px) {
+        .M {
+          position: absolute;
+          /* left: 10px; */
+          font-size: 60px;
+        }
+      }
+      @media (max-width: 414px) {
+        .M {
+          position: absolute;
+          /* left: 10px; */
+          font-size: 60px;
+        }
       }
 
       .L {
@@ -121,6 +166,20 @@
         position: relative;
         top: 20px;
       }
+      @media (max-width: 600px) {
+        .L {
+          position: absolute;
+          margin-left: 4.3vh;
+          font-size: 60px;
+        }
+      }
+      @media (max-width: 415px) {
+        .L {
+          position: absolute;
+          margin-left: 6vh;
+          font-size: 60px;
+        }
+      }
 
       .S {
         font-size: 210px;
@@ -135,6 +194,20 @@
         position: relative;
         top: 20px;
       }
+      @media (max-width: 600px) {
+        .S {
+          position: absolute;
+          margin-left: 7.3vh;
+          font-size: 60px;
+        }
+      }
+      @media (max-width: 415px) {
+        .S {
+          position: absolute;
+          margin-left: 10vh;
+          font-size: 60px;
+        }
+      }
 
       .A {
         font-size: 210px;
@@ -148,6 +221,20 @@
         -webkit-text-fill-color: transparent;
         position: relative;
         top: 20px;
+      }
+      @media (max-width: 600px) {
+        .A {
+          position: absolute;
+          margin-left: 10vh;
+          font-size: 60px;
+        }
+      }
+      @media (max-width: 415px) {
+        .A {
+          position: absolute;
+          margin-left: 13vh;
+          font-size: 60px;
+        }
       }
 
       .typed-cursor {
@@ -165,17 +252,21 @@
       </div>
       <div class="menu-icons-div" id="menu">
         <ul class="menu-icons">
-          <li><a href="">HOME</a></li>
-          <li><a href="">EVENTS</a></li>
-          <li><a href="">PROJECTS</a></li>
+          <li><a href="homepage.html">HOME</a></li>
+          <li><a href="Events.html">EVENTS</a></li>
+          <li><a href="index.html">PROJECTS</a></li>
           <li><a href="">BLOG</a></li>
-          <li><a href="">GALLERY</a></li>
-          <li><a href="">MEMBERS</a></li>
+          <li><a href="Gallery.html">GALLERY</a></li>
+          <li><a href="Members.html">MEMBERS</a></li>
           <li><a href="">YOUTUBE</a></li>
         </ul>
       </div>
       <div>
-        <img src="./icons8-menu-bar-50.png" class="menu-lines" id="menu-icon" />
+        <img
+          src="https://res.cloudinary.com/drcjc86ft/image/upload/v1715606189/icons8-menu-bar-50_okbdi7.png"
+          class="menu-lines"
+          id="menu-icon"
+        />
       </div>
     </nav>
     <img
@@ -191,8 +282,11 @@
       <p class="A">A</p>
     </div>
     <div class="mlsafull" style="position: absolute; color: white">
-      <p class="microsoft-learn">Microsoft Learn</p>
-      <p class="stu-amb">Student Ambassador</p>
+      <pre class="microsoft-learn">
+Microsoft Learn
+        Student Ambassador
+      </pre>
+      <!-- <p class="stu-amb">Student Ambassador</p> -->
     </div>
 
     <br />
@@ -261,14 +355,14 @@
     </div>
     <br />
     <br />
-    <div class="about">Our Domains</div>
+    <div class="domains">Our Domains</div>
     <div class="vision-content">
       <img
         src="https://res.cloudinary.com/drcjc86ft/image/upload/v1710501005/technical_qi37di.png"
         alt="vision-img"
         class="vision-img"
       />
-      <div class="vision" style="top: 2140px">Technical</div>
+      <div class="technical">Technical</div>
       <div class="vision-text">
         <br />
         <p>
@@ -288,7 +382,7 @@
         alt="vision-img"
         class="vision-img"
       />
-      <div class="vision" style="top: 2520px">Creative</div>
+      <div class="creative">Creative</div>
       <div class="vision-text">
         <br />
         <p>
@@ -308,7 +402,7 @@
         alt="vision-img"
         class="vision-img"
       />
-      <div class="vision" style="top: 2900px">Operations</div>
+      <div class="operations">Operations</div>
       <div class="vision-text">
         <br />
         <p>
@@ -329,7 +423,7 @@
         alt="vision-img"
         class="vision-img"
       />
-      <div class="vision" style="top: 3300px">Marketing</div>
+      <div class="marketing">Marketing</div>
       <div class="vision-text">
         <br />
         <p>
@@ -350,7 +444,7 @@
         alt="vision-img"
         class="vision-img"
       />
-      <div class="vision" style="top: 3690px">Youtube</div>
+      <div class="youtube">Youtube</div>
       <div class="vision-text">
         <br />
         <p>
@@ -371,7 +465,7 @@
         alt="vision-img"
         class="vision-img"
       />
-      <div class="vision" style="top: 4070px">Design</div>
+      <div class="design">Design</div>
       <div class="vision-text">
         <br />
         <p>
@@ -385,8 +479,8 @@
 
     <br />
     <br />
-    <div class="about">Our Leads</div>
-    <div class="container">
+    <div class="leads">Our Leads</div>
+    <div class="container-leads">
       <br />
       <div class="slider-wrapper">
         <button id="prev-slide" class="slide-button material-symbols-rounded">
@@ -458,7 +552,7 @@
     <br />
     <div class="about">Our Ex-Leads</div>
     <br />
-    <div class="container">
+    <div class="container-exleads">
       <div class="slider-wrapper">
         <button id="prev-slide" class="slide-button material-symbols-rounded">
           chevron_left
@@ -528,7 +622,7 @@
     <div class="about">Our Sponsors</div>
     <br />
     <br />
-    <div class="banner" style="position: absolute; top: 5700px">
+    <div class="banner1" style="" ;>
       <br />
       <div class="container_sponsers">
         <a href="https://www.foundit.in/zuno/" class="card_sponsers">
